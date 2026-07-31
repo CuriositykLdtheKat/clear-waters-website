@@ -62,12 +62,12 @@ function Index() {
           alt="Calm sunlit water"
           width={1920}
           height={1088}
-          className="absolute inset-0 h-full w-full object-cover opacity-45"
+          className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/80 to-background" />
-        <div className="relative mx-auto max-w-4xl px-6 py-28 text-center sm:py-36">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
+        <div className="relative mx-auto flex min-h-[70vh] max-w-4xl flex-col items-center justify-center px-6 py-28 text-center sm:py-36">
           <p className="eyebrow">Bookkeeping for small business</p>
-          <h1 className="mt-6 font-display text-5xl leading-[1.05] sm:text-6xl">
+          <h1 className="mt-4 font-flowing text-4xl leading-[1.2] sm:text-5xl">
             Navigating your finances so you can sail your business forward.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
