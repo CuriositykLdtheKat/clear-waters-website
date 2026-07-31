@@ -32,8 +32,6 @@ const services = [
   },
 ];
 
-export default function noop() {}
-
 function Index() {
   return (
     <>
