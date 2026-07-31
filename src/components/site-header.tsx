@@ -16,9 +16,9 @@ export function SiteHeader() {
           <img
             src={logo.url}
             alt="Clear Waters Bookkeeping"
-            className="h-14 w-auto"
-            width={1470}
-            height={630}
+            className="h-12 w-auto sm:h-14"
+            width={800}
+            height={300}
           />
         </Link>
         <nav className="flex items-center gap-6 text-sm">
