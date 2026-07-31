@@ -1,11 +1,19 @@
 import { Link } from "@tanstack/react-router";
+import icon from "@/assets/cwb-icon.jpg.asset.json";
 
 export function SiteFooter() {
   return (
     <footer className="surface-deep mt-24">
       <div className="mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:grid-cols-3">
         <div>
-          <p className="font-display text-2xl">Clear Waters Bookkeeping</p>
+          <img
+            src={icon.url}
+            alt="Clear Waters Bookkeeping monogram"
+            className="h-16 w-16 rounded-full"
+            width={1000}
+            height={1000}
+          />
+          <p className="mt-4 font-display text-2xl">Clear Waters Bookkeeping</p>
           <p className="mt-3 max-w-xs text-sm opacity-80">
             Navigating your finances so you can sail your business forward.
           </p>
