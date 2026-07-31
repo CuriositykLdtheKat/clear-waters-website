@@ -83,7 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Navigating your finances so you can sail your business forward. Bookkeeping for small businesses.",
+          "Navigating your finances so you can sail your business forward. BOOKKEEPING FOR SMALL BUSINESSES.",
       },
       { name: "author", content: "Clear Waters Bookkeeping" },
       { property: "og:title", content: "Clear Waters Bookkeeping" },
