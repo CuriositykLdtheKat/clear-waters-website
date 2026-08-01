@@ -28,7 +28,7 @@ const heading = { color: '#0f4c4c', fontSize: '22px', margin: '0 0 8px' }
 const label = { color: '#6b7280', fontSize: '12px', margin: '12px 0 0', letterSpacing: '0.08em', textTransform: 'uppercase' as const }
 const value = { color: '#111827', fontSize: '15px', margin: '2px 0 0' }
 
-const Row = ({ title, text }: { title: string; text?: string }) =>
+const Row = ({ title, text }: { title: string; text?: string | undefined }) =>
   text ? (
     <Section>
       <Text style={label}>{title}</Text>
