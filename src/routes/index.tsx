@@ -67,7 +67,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background/80" />
         <div className="relative mx-auto flex min-h-[70vh] max-w-4xl flex-col items-center justify-center px-6 py-28 text-center sm:py-36">
           <p className="eyebrow uppercase">BOOKKEEPING FOR SMALL BUSINESSES</p>
-          <h1 className="mt-4 font-flowing text-4xl leading-[1.2] sm:text-5xl">
+          <h1 className="mt-4 font-flowing text-3xl leading-[1.25] tracking-wide sm:text-4xl sm:leading-[1.2] sm:tracking-wider">
             Navigating your finances so you can sail your business forward.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
