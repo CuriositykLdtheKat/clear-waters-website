@@ -15,7 +15,9 @@ export const createBooking = createServerFn({ method: "POST" })
   .validator((data) => bookingSchema.parse(data))
   .handler(async ({ data }) => {
     const { supabaseAdmin } = await import("@/integrations/supabase/client.server");
-    const { error } = await supabaseAdmin.from("bookings").insert({
+    const { data: inserted, error } = await supabaseAdmin
+      .from("bookings")
+      .insert({
       name: data.name,
       email: data.email,
       phone: data.phone || null,
@@ -23,10 +25,33 @@ export const createBooking = createServerFn({ method: "POST" })
       preferred_date: data.preferredDate,
       preferred_time: data.preferredTime,
       message: data.message || null,
-    });
+      })
+      .select("id")
+      .single();
     if (error) {
       console.error("Booking insert failed:", error);
       throw new Error("Could not save booking request. Please try again.");
     }
+
+    try {
+      const { sendTemplateEmail } = await import("@/lib/email-templates/send-email");
+      await sendTemplateEmail("booking-notification", "info@clearwatersbookkeeping.com", {
+        templateData: {
+          name: data.name,
+          email: data.email,
+          phone: data.phone || "",
+          businessName: data.businessName || "",
+          preferredDate: data.preferredDate,
+          preferredTime: data.preferredTime,
+          message: data.message || "",
+        },
+        idempotencyKey: `booking-notification-${inserted?.id ?? data.email}`,
+        replyTo: data.email,
+      });
+    } catch (emailError) {
+      // Never fail the booking because the notification email failed.
+      console.error("Booking notification email failed:", emailError);
+    }
+
     return { success: true };
   });
