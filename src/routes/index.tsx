@@ -72,7 +72,7 @@ function Index() {
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
             Clear Waters Bookkeeping keeps your books accurate, current, and easy to
-            understand — so you can spend your time running the business, not reconciling it.
+            understand — so you can spend your time running the business, not reconciling{"\u00A0"}it.
           </p>
           <div className="mt-10">
             <Link
