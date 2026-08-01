@@ -46,12 +46,12 @@ function AboutPage() {
             that makes sense.
           </p>
           <p>
-            We work with service businesses, contractors, creatives, and shops who want to stop
+            I work with service businesses, contractors, creatives, and shops who want to stop
             guessing. That means a clean ledger, a close that happens on schedule, and a monthly
             summary written in plain language, not spreadsheet shorthand.
           </p>
           <p>
-            As a newly launching practice, we're intentionally taking on a limited roster of
+            As a newly launching practice, I'm intentionally taking on a limited roster of
             clients so every set of books gets real attention.
           </p>
         </div>

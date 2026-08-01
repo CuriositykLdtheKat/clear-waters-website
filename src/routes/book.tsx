@@ -73,7 +73,7 @@ function BookPage() {
         <p className="eyebrow">Book a consultation</p>
         <h1 className="mt-5 font-display text-5xl">Let's find time to talk</h1>
         <p className="mt-5 text-lg text-muted-foreground">
-          Pick a preferred date and time for a free 30-minute discovery call. We'll confirm by email
+          Pick a preferred date and time for a free 30-minute discovery call. I'll confirm by email
           within one business day.
         </p>
         <dl className="mt-10 space-y-4 text-sm">
@@ -86,7 +86,7 @@ function BookPage() {
             <dd className="text-muted-foreground">Monday – Friday, 9am – 5pm</dd>
           </div>
           <div>
-            <dt className="font-semibold">Where we work</dt>
+            <dt className="font-semibold">Where I work</dt>
             <dd className="text-muted-foreground">Fully remote, serving clients nationwide</dd>
           </div>
         </dl>
@@ -97,7 +97,7 @@ function BookPage() {
           <div className="py-12 text-center">
             <h2 className="font-display text-2xl">Consultation request received.</h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              We'll confirm your preferred time within one business day.
+              I'll confirm your preferred time within one business day.
             </p>
           </div>
         ) : (

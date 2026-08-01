@@ -30,7 +30,7 @@ const services = [
   },
   {
     name: "Catch-up & clean-up",
-    copy: "For books that are months behind or were never set up properly. We rebuild your history so it's accurate and tax-ready.",
+    copy: "For books that are months behind or were never set up properly. I rebuild your history so it's accurate and tax-ready.",
     items: ["Prior-period rebuilds", "Chart of accounts repair", "Tax-prep handoff package"],
   },
   {
@@ -90,7 +90,7 @@ function ServicesPage() {
         <div className="mt-16 rounded-2xl surface-deep px-8 py-12 text-center">
           <h2 className="font-display text-3xl">Not sure which you need?</h2>
           <p className="mx-auto mt-3 max-w-xl text-sm opacity-85">
-            Most clients start with a discovery call. We'll look at where your books stand and
+            Most clients start with a discovery call. I'll look at where your books stand and
             recommend the right starting point.
           </p>
           <Link
