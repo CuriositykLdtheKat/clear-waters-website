@@ -45,7 +45,7 @@ const services = [
   },
   {
     name: "Catch-up & clean-up",
-    copy: "Behind or inherited a mess? We rebuild your ledger and get you current, tax-ready, and calm.",
+    copy: "Behind or inherited a mess? I rebuild your ledger and get you current, tax-ready, and calm.",
   },
   {
     name: "Reporting & insight",
@@ -87,7 +87,7 @@ function Index() {
       </section>
 
       <section className="mx-auto max-w-6xl px-6 py-24">
-        <h2 className="max-w-xl font-display text-4xl">What we take off your plate</h2>
+        <h2 className="max-w-xl font-display text-4xl">What I take off your plate</h2>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {services.map((s) => (
             <article
@@ -131,7 +131,7 @@ function Index() {
       <section className="mx-auto max-w-3xl px-6 py-24 text-center">
         <h2 className="font-display text-4xl">Ready for books you can trust?</h2>
         <p className="mt-4 text-muted-foreground">
-          New clients welcome — we're taking on a limited number of businesses as we launch.
+          New clients welcome — I'm taking on a limited number of businesses as we launch.
         </p>
         <Link
           to="/contact"

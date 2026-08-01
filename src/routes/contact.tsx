@@ -35,7 +35,7 @@ function ContactPage() {
         <p className="eyebrow">Contact</p>
         <h1 className="mt-5 font-display text-5xl">Let's talk about your books</h1>
         <p className="mt-5 text-lg text-muted-foreground">
-          Tell us a little about your business and we'll follow up within one business day to
+          Tell me a little about your business and I'll follow up within one business day to
           schedule a free 30-minute discovery call.
         </p>
         <dl className="mt-10 space-y-4 text-sm">
@@ -48,7 +48,7 @@ function ContactPage() {
             <dd className="text-muted-foreground">Monday – Friday, 9am – 5pm</dd>
           </div>
           <div>
-            <dt className="font-semibold">Where we work</dt>
+            <dt className="font-semibold">Where I work</dt>
             <dd className="text-muted-foreground">Fully remote, serving clients nationwide</dd>
           </div>
         </dl>
@@ -59,7 +59,7 @@ function ContactPage() {
           <div className="py-12 text-center">
             <h2 className="font-display text-2xl">Thank you — message received.</h2>
             <p className="mt-3 text-sm text-muted-foreground">
-              We'll be in touch within one business day.
+              I'll be in touch within one business day.
             </p>
           </div>
         ) : (
