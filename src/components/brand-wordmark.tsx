@@ -46,7 +46,7 @@ export function BrandWordmark({
         </span>
         {tagline ? (
           <span
-            className={`mt-2 font-flowing ${size === "lg" ? "text-xl sm:text-2xl" : "text-base"} ${
+            className={`mt-2 font-flowing leading-[1.25] tracking-wide ${size === "lg" ? "text-xl sm:text-2xl" : "text-base"} ${
               tone === "onDeep" ? "text-current opacity-90" : "text-primary"
             }`}
           >
