@@ -77,9 +77,10 @@ function Index() {
           <div className="mt-10">
             <Link
               to="/contact"
-              className="inline-flex rounded-full bg-primary px-8 py-3 font-semibold text-primary-foreground shadow-soft transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:scale-[1.02] hover:opacity-90 active:scale-[0.98]"
             >
-              Schedule a free consultation
+              Book a free consultation
+              <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
