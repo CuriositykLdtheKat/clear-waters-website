@@ -131,7 +131,7 @@ function Index() {
       <section className="mx-auto max-w-3xl px-6 py-24 text-center">
         <h2 className="font-display text-4xl">Ready for books you can trust?</h2>
         <p className="mt-4 text-muted-foreground">
-          New clients welcome — I'm taking on a limited number of businesses as we launch.
+          New clients welcome — I'm taking on a limited number of businesses as I launch.
         </p>
         <Link
           to="/contact"
