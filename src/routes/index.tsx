@@ -71,7 +71,7 @@ function Index() {
             Navigating your finances so you can sail your business forward.
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground">
-            Clear Waters Bookkeeping keeps your numbers accurate, current, and easy to
+            Clear Waters Bookkeeping keeps your books accurate, current, and easy to
             understand — so you can spend your time running the business, not reconciling it.
           </p>
           <div className="mt-10">
