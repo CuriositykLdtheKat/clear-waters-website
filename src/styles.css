@@ -109,7 +109,7 @@
   --color-sand: var(--sand);
   --font-display: "Playfair Display", Georgia, serif;
   --font-sans: "Karla", ui-sans-serif, system-ui, sans-serif;
-  --font-flowing: "Dancing Script", Georgia, cursive;
+  --font-flowing: "Tenor Sans", Georgia, sans-serif;
   --shadow-soft: var(--shadow-soft);
 }
 
