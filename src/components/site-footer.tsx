@@ -17,6 +17,7 @@ export function SiteFooter() {
             <li><Link to="/services" className="hover:underline">Services</Link></li>
             <li><Link to="/about" className="hover:underline">About</Link></li>
             <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+            <li><Link to="/book" className="hover:underline">Book a consultation</Link></li>
           </ul>
         </div>
         <div className="text-sm">

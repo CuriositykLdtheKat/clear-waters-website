@@ -6,6 +6,7 @@ const links = [
   { to: "/services", label: "Services" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
+  { to: "/book", label: "Book" },
 ] as const;
 
 export function SiteHeader() {
@@ -29,7 +30,7 @@ export function SiteHeader() {
             </Link>
           ))}
           <Link
-            to="/contact"
+            to="/book"
             className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground shadow-soft transition-opacity hover:opacity-90"
           >
             Book a call
