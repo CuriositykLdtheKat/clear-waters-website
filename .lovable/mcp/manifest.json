@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "sdk_version": "0.26.2",
+  "path": "/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://wnytlktxheazwiitinpy.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "clear-waters-website",
+      "version": "0.1.0",
+      "title": "Clear Waters Website"
+    },
+    "tools": [
+      {
+        "name": "get_site_info",
+        "title": "Get site info",
+        "description": "Return Clear Waters Bookkeeping's services, pricing approach, contact details, and hours.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_bookings",
+        "title": "List bookings",
+        "description": "List consultation requests submitted through the Clear Waters Bookkeeping website, newest first.",
+        "annotations": {
+          "readOnlyHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "limit": {
+              "default": 20,
+              "description": "How many bookings to return.",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100
+            },
+            "status": {
+              "description": "Optional status filter, e.g. 'pending'.",
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "create_booking",
+        "title": "Create booking",
+        "description": "Create a consultation request for Clear Waters Bookkeeping on behalf of a prospective client.",
+        "annotations": {
+          "readOnlyHint": false,
+          "destructiveHint": false,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100,
+              "description": "Client's full name."
+            },
+            "email": {
+              "type": "string",
+              "maxLength": 255,
+              "format": "email",
+              "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$",
+              "description": "Client's email address."
+            },
+            "preferredDate": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "description": "Preferred date, YYYY-MM-DD."
+            },
+            "preferredTime": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 50,
+              "description": "Preferred time, e.g. '10:00 AM'."
+            },
+            "phone": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 50
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Phone number, or null."
+            },
+            "businessName": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 100
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "Business name, or null."
+            },
+            "message": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 1000
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "description": "What they need help with, or null."
+            }
+          },
+          "required": [
+            "name",
+            "email",
+            "preferredDate",
+            "preferredTime",
+            "phone",
+            "businessName",
+            "message"
+          ]
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
