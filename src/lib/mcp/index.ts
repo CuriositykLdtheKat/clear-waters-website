@@ -1,4 +1,4 @@
-import { auth, defineMcp, type AnyToolDefinition } from "@lovable.dev/mcp-js";
+import { auth, defineMcp, type McpDefinitionInput } from "@lovable.dev/mcp-js";
 import getSiteInfoTool from "./tools/get-site-info";
 import listBookingsTool from "./tools/list-bookings";
 import createBookingTool from "./tools/create-booking";
@@ -16,5 +16,5 @@ export default defineMcp({
     issuer: `https://${projectRef}.supabase.co/auth/v1`,
     acceptedAudiences: "authenticated",
   }),
-  tools: [getSiteInfoTool, listBookingsTool, createBookingTool] as AnyToolDefinition[],
+  tools: [getSiteInfoTool, listBookingsTool, createBookingTool] as McpDefinitionInput["tools"],
 });
