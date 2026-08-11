@@ -16,6 +16,9 @@ export default defineTool({
     businessName: z.string().trim().max(100).nullable().describe("Business name, or null."),
     message: z.string().trim().max(1000).nullable().describe("What they need help with, or null."),
   },
+  outputSchema: {
+    booking: z.record(z.string(), z.unknown()),
+  },
   annotations: { readOnlyHint: false, destructiveHint: false, openWorldHint: false },
   handler: async (input, ctx) => {
     if (!ctx.isAuthenticated()) {

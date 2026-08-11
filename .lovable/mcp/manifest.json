@@ -30,7 +30,65 @@
           "type": "object",
           "properties": {}
         },
-        "outputSchema": null
+        "outputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "business": {
+              "type": "string"
+            },
+            "tagline": {
+              "type": "string"
+            },
+            "positioning": {
+              "type": "string"
+            },
+            "services": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name",
+                  "description"
+                ]
+              }
+            },
+            "pricing": {
+              "type": "string"
+            },
+            "contactEmail": {
+              "type": "string"
+            },
+            "hours": {
+              "type": "string"
+            },
+            "location": {
+              "type": "string"
+            },
+            "bookingPage": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "business",
+            "tagline",
+            "positioning",
+            "services",
+            "pricing",
+            "contactEmail",
+            "hours",
+            "location",
+            "bookingPage"
+          ]
+        }
       },
       {
         "name": "list_bookings",
@@ -58,7 +116,25 @@
             }
           }
         },
-        "outputSchema": null
+        "outputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "bookings": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "propertyNames": {
+                  "type": "string"
+                },
+                "additionalProperties": {}
+              }
+            }
+          },
+          "required": [
+            "bookings"
+          ]
+        }
       },
       {
         "name": "create_booking",
@@ -144,7 +220,22 @@
             "message"
           ]
         },
-        "outputSchema": null
+        "outputSchema": {
+          "$schema": "http://json-schema.org/draft-07/schema#",
+          "type": "object",
+          "properties": {
+            "booking": {
+              "type": "object",
+              "propertyNames": {
+                "type": "string"
+              },
+              "additionalProperties": {}
+            }
+          },
+          "required": [
+            "booking"
+          ]
+        }
       }
     ]
   }

@@ -16,6 +16,9 @@ export default defineTool({
       .optional()
       .describe("Optional status filter, e.g. 'pending'."),
   },
+  outputSchema: {
+    bookings: z.array(z.record(z.string(), z.unknown())),
+  },
   annotations: { readOnlyHint: true, openWorldHint: false },
   handler: async ({ limit, status }, ctx) => {
     if (!ctx.isAuthenticated()) {
